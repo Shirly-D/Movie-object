@@ -29,6 +29,11 @@ for (var i = 0; i < movie.length; i++)
 document.querySelector('ul').innerHTML = a;
 console.log(a);
 
+function search () {
+
+    var ul = document.querySelector('#ul-section');
+}
+
 
 
 
