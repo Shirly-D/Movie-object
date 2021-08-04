@@ -120,6 +120,22 @@ li {
   main styling starts here
 =================================*/
 
+main h2 {
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button:hover {
+  color: cornsilk;
+  background-color: blueviolet;
+  transition: 2s;
+}
+
 
 
 
