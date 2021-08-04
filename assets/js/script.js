@@ -23,32 +23,29 @@ var a = "";
 
 for (var i = 0; i < movie.length; i++) 
 {
-   a += '<li>' + '<a>' + 'Movie name :' + movie[i].mov_name + " " + 'Release date :' + movie[i].release_date + " " + 'Actor name: ' + movie[i].actor_name +
-    " " + 'Producer name: ' + movie[i].producer_name + '</a>' + '</li>';
+   a += '<li>' + 'Movie name :' + movie[i].mov_name + " " + 'Release date :' + movie[i].release_date + " " + 'Actor name: ' + movie[i].actor_name +
+    " " + 'Producer name: ' + movie[i].producer_name + '</li>';
     document.write('<br>'); 
 }
 document.querySelector('ul').innerHTML = a;
 // console.log(a);
+var input = document.querySelector('input');
+    input.addEventListener('keydown', function() {search()});
 
-
-function search () {
-    var input = document.querySelector('#search');
-    input.addEventListener('onkeyup', function() {search;})
+function search() {
     var ul = document.querySelector('#ul-section');
     var filter = input.value.toUpperCase();
     var li = document.querySelectorAll('li');
-    console.log(input);
     for (var j = 0; j < li.length; j++)
     {
-        var b = li[j].querySelectorAll('a')[0];
-        var text = b.textContent || b.innerText;
+        var text = li[j].textContent || li[j].innerText;
         if (text.toUpperCase().indexOf(filter) > -1)
         {
-            li[j].style.display = "";
+            li[j].style.display = "block";
         }
         else
         {
-            li[j].style.display = none;
+            li[j].style.display = "none";
         }
     }
 
